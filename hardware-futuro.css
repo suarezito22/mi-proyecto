@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.2; /* Reduce el espacio entre líneas */
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px; /* Compactamos el tamaño del título */
+    margin-bottom: 5px; /* Menos separación debajo del título */
+    
+}
+.titulo-margen {
+    border: 2px solid black; /* Borde negro */
+    padding: 10px; /* Espaciado interno */
+    display: inline-block; /* Para que el margen solo rodee el texto */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra negra con transparencia */
+}
+
+
+
+p {
+    margin-bottom: 15px; /* Reduce al mínimo la separación entre párrafos */
+}
+
+.volver {
+    display: block;
+    text-align: left;
+    margin-top: 20px; /* Menos espacio encima del enlace */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+
