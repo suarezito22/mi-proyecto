@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardware en la Actualidad</title>
-    <link rel="stylesheet" href="hardware-futuro.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="hardware-futuro.css">
+
 </head>
 <body>
+    <div class="side-waves left"></div>
+    <div class="side-waves right"></div>
+  <div class="content">
 
     <h1 class="titulo-margen">Hardware en la Actualidad: Innovaciones que Están Cambiando el Mundo</h1>
+
 
     <p>Desde hace varios años, la tecnología ha avanzado a pasos agigantados, y su impacto es evidente al comparar la actualidad con generaciones pasadas. 
     Lo que antes parecía una "alucinación" en términos de rendimiento ahora es una realidad tangible en sectores como el empresarial, el gaming, la ofimática 
@@ -27,8 +32,374 @@
 
     <p>A continuación, presentamos un listado de las tecnologías actuales y las compañías que lideran la innovación y el desarrollo, además de una comparación con sus generaciones anteriores.</p>
 
-    <a href="index.html" class="volver">⬅ Volver al índice</a>
+    <h3 class="subtitulo">Procesadores: Evolución y Rendimiento</h3>
 
+    <p>Los procesadores han mejorado en potencia y eficiencia. Si comparamos el Intel i9-11900K con el i9-14900K, vemos que el número de núcleos e hilos ha aumentado considerablemente,
+    lo que permite manejar más tareas en paralelo y mejorar el rendimiento en aplicaciones exigentes como videojuegos y diseño.</p>
+
+    <p>A pesar de que la frecuencia base del modelo más reciente es menor, su tecnología de turbo boost le permite alcanzar hasta 6.0 GHz, superando ampliamente a su predecesor. Además, 
+    la compatibilidad con memorias DDR5 permite mayores velocidades y menor consumo energético.</p>
+
+    <h3 class="subtitulo">Procesadores: Evolución y Rendimiento</h3>
+
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th>Fabricante</th>
+                <th>Modelo Anterior</th>
+                <th>Modelo Actual</th>
+                <th>Núcleos / Hilos</th>
+                <th>Frecuencia (Base/Boost)</th>
+                <th>Consumo (TDP)</th>
+                <th>Tecnología</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Intel</td>
+                <td>Core i7-10700K</td>
+                <td>Core i7-14700K</td>
+                <td>8C/16T → 20C/28T</td>
+                <td>3.8 GHz / 5.1 GHz → 3.4 GHz / 5.6 GHz</td>
+                <td>125W</td>
+                <td>14nm → Intel 7 (10nm)</td>
+            </tr>
+            <tr>
+                <td>AMD</td>
+                <td>Ryzen 7 5800X</td>
+                <td>Ryzen 7 7800X3D</td>
+                <td>8C/16T</td>
+                <td>3.8 GHz / 4.7 GHz → 4.2 GHz / 5.0 GHz</td>
+                <td>105W → 120W</td>
+                <td>7nm → 5nm + 3D V-Cache</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>M1</td>
+                <td>M3</td>
+                <td>8C/8T → 10C/10T</td>
+                <td>3.2 GHz → 4.1 GHz</td>
+                <td>15W → 25W</td>
+                <td>5nm → 3nm</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+<div class="imagenes-procesadores">
+    <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/imagen-procesadores.webp" alt="fabricantes de chips" width="300">
+    <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/lideres-microprocesadores.jpeg" alt="fabricadores lideres" width="300">
+</div>
+
+    <h1>Tarjetas Gráficas: Potencia y Eficiencia en la Nueva Generación</h1>
+
+    <p>Las tarjetas gráficas han evolucionado significativamente en los últimos años, impulsadas por la demanda de videojuegos, inteligencia artificial y renderizado 3D. 
+    Fabricantes como NVIDIA, AMD y Intel han mejorado sus arquitecturas, aumentando la cantidad de núcleos, memoria y eficiencia energética.</p>
+    
+    <h3 class="subtitulo">¿Qué son los núcleos CUDA y los núcleos RT?</h3>
+
+    <p>Los núcleos CUDA (Compute Unified Device Architecture) son unidades de procesamiento en las tarjetas gráficas de NVIDIA, diseñadas para manejar cálculos paralelos y optimizar 
+    tareas como el procesamiento de gráficos y la inteligencia artificial.</p>
+
+    <p>Por otro lado, los núcleos RT (Ray Tracing) se encargan de mejorar la iluminación y las sombras en tiempo real, logrando gráficos más realistas en los videojuegos. AMD tiene su propia 
+    tecnología de Ray Tracing en sus tarjetas Radeon RX.</p>
+
+    <h3 class="subtitulo">Grafica comparativa</h3>
+
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>Arquitectura</th>
+                <th>Núcleos</th>
+                <th>VRAM</th>
+                <th>Frecuencia (MHz)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NVIDIA</td>
+                <td>RTX 5090</td>
+                <td>Blackwell</td>
+                <td>18,432 CUDA</td>
+                <td>24 GB GDDR7</td>
+                <td>2800</td>
+            </tr>
+            <tr>
+                <td>AMD</td>
+                <td>RX 8900 XTX</td>
+                <td>RDNA 4</td>
+                <td>14,080 Stream Processors</td>
+                <td>24 GB GDDR7</td>
+                <td>2750</td>
+            </tr>
+            <tr>
+                <td>Intel</td>
+                <td>Arc Battlemage B70</td>
+                <td>Battlemage</td>
+                <td>8192 Xe Cores</td>
+                <td>16 GB GDDR6X</td>
+                <td>2600</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="marcas-graficas">
+
+    <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/marcas de graficas.webp" alt="fabricantes de graficas" width="450">
+</div>
+
+<h1>Evolucion del almacenamiento</h1>
+
+<p>A lo largo de los años, el almacenamiento ha evolucionado significativamente, pasando de los tradicionales discos duros mecánicos 
+(HDD) a las unidades de estado sólido (SSD) y, más recientemente, a las memorias NVMe de última generación. Esta evolución ha permitido mejorar 
+la velocidad de acceso a la información, reducir la latencia y optimizar el consumo energético, impactando directamente en el rendimiento de computadoras personales, 
+servidores y centros de datos.</p>
+
+<h2 class="subtitulo">Diferencias entre HDD, SSD y NVMe</h2>
+
+<h3>1.HDD (Disco Duro Mecánico).</h3>
+<ul>
+    <li>Utiliza discos magnéticos y un cabezal de lectura/escritura mecánico.</a></li>
+    <li>Es la opción más económica, pero también la más lenta y propensa a fallos mecánicos.</a></li>
+    <li>Velocidades promedio de 100 - 200 MB/s.</a></li>
+    <li>Alta latencia y alto consumo energético.</li>
+</ul>
+<h3>2.SSD (Unidad de Estado Sólido - SATA III)</h3>
+<ul>
+    <li>No tiene partes mecánicas, lo que mejora la velocidad y durabilidad.</a></li>
+    <li>Utiliza la interfaz SATA III con un límite de velocidad de 500 - 600 MB/s.</a></li>
+    <li>Menor consumo energético en comparación con HDD.</a></li>
+</ul>
+
+<h3>3.NVMe (Memoria No Volátil de Alta Velocidad).</h3>
+<ul>
+    <li>Aprovecha el bus PCIe en lugar del limitado SATA III.</a></li>
+    <li>Velocidades de transferencia desde 3000 MB/s hasta más de 10,000 MB/s en la última generación.</a></li>
+    <li>Reduce significativamente la latencia y optimiza el rendimiento en aplicaciones exigentes.</a></li>
+</ul>
+<h2>Comparacion de rendimiento</h2>
+
+
+<table class="excel-table">
+        <thead>
+            <tr>
+                <th>Tipo de Almacenamiento</th>
+                <th>Velocidad de Lectura</th>
+                <th>Velocidad de Escritura</th>
+                <th>Latencia</th>
+                <th>Capacidad Máxima</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HDD (Mecánico)</td>
+                <td>100 - 250 MB/s</td>
+                <td>80 - 200 MB/s</td>
+                <td>Alta (4 - 10 ms)</td>
+                <td>20 TB</td>
+            </tr>
+            <tr>
+                <td>SSD SATA</td>
+                <td>500 - 600 MB/s</td>
+                <td>450 - 550 MB/s</td>
+                <td>Media (0.1 ms)</td>
+                <td>8 TB</td>
+            </tr>
+            <tr>
+                <td>SSD NVMe 3.0</td>
+                <td>3,500 MB/s</td>
+                <td>3,300 MB/s</td>
+                <td>Baja (0.02 ms)</td>
+                <td>8 TB</td>
+            </tr>
+            <tr>
+                <td>SSD NVMe 4.0</td>
+                <td>7,500 MB/s</td>
+                <td>6,900 MB/s</td>
+                <td>Muy Baja (0.01 ms)</td>
+                <td>8 TB</td>
+            </tr>
+            <tr>
+                <td>SSD NVMe 5.0</td>
+                <td>14,000 MB/s</td>
+                <td>12,000 MB/s</td>
+                <td>Extremadamente Baja (0.01 ms)</td>
+                <td>8 TB</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="imagenes-almacenamiento">
+        <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/almacenamiento-dif.jpg" alt="fabricantes de chips" width="450">
+    </div>
+    
+    <h1>Memoria RAM: Evolución y Comparativa</h1>
+
+    <p>La memoria RAM es un componente esencial en cualquier dispositivo, ya que influye en la velocidad de respuesta y la capacidad de 
+    multitarea. En los últimos años, la evolución ha sido notable, con el salto de DDR4 a DDR5, y con DDR6 en desarrollo.</p>
+
+    <p>Los cambios más importantes entre generaciones incluyen mayores velocidades, menor consumo de energía y mayor ancho de banda, lo
+     que permite mejorar el rendimiento en gaming, diseño gráfico, inteligencia artificial y servidores.</p>
+
+    <p>A continuación, se presenta una tabla comparativa entre DDR4, DDR5 y DDR6 con sus especificaciones clave:</p>
+
+    <table class="excel-table">
+        <tr>
+            <th>Característica</th>
+            <th>DDR4</th>
+            <th>DDR5</th>
+            <th>DDR6 (Futura)</th>
+        </tr>
+        <tr>
+            <td>Frecuencia Base</td>
+            <td>2133 MHz - 3200 MHz</td>
+            <td>4800 MHz - 6400 MHz</td>
+            <td>8400 MHz - 17000 MHz</td>
+        </tr>
+        <tr>
+            <td>Latencia (CAS)</td>
+            <td>~14-16</td>
+            <td>~32-40</td>
+            <td>Por definir</td>
+        </tr>
+        <tr>
+            <td>Ancho de Banda</td>
+            <td>~25.6 GB/s</td>
+            <td>~51.2 GB/s</td>
+            <td>Hasta 128 GB/s</td>
+        </tr>
+        <tr>
+            <td>Consumo de Energía</td>
+            <td>1.2V</td>
+            <td>1.1V</td>
+            <td>0.9V (estimado)</td>
+        </tr>
+        <tr>
+            <td>Capacidad Máxima por Módulo</td>
+            <td>32 GB</td>
+            <td>128 GB</td>
+            <td>256 GB</td>
+        </tr>
+    </table>
+    <div class="imagenes-ram">
+        <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/imagen-ram.jpeg" alt="fabricantes de chips" width="450">
+    </div>
+
+    <h3>Impacto en el rendimiento</h3>
+    <ul class="separacion">
+        <li>Gaming: DDR5 ya ha mostrado mejoras en FPS para juegos que dependen de la memoria RAM, y DDR6 podría optimizar aún más este aspecto.</a></li>
+
+        <li>Edición y Renderizado: Aplicaciones como Premiere Pro, Blender y AutoCAD aprovechan el mayor ancho de banda de DDR5 y DDR6 para acelerar los 
+        tiempos de render.</a></li>
+
+        <li>Servidores e IA: DDR6 será clave en centros de datos y procesamiento de inteligencia artificial, donde se requieren grandes capacidades de 
+        RAM y alto ancho de banda.</a></li>
+    </ul>
+
+    <h1>Placa Madre: Evolución y Comparativa</h1>
+
+    <p>La placa madre (o motherboard) es el componente principal que conecta y gestiona la comunicación entre el procesador, la memoria RAM, la tarjeta gráfica,
+     el almacenamiento y otros dispositivos del sistema. Su evolución ha estado marcada por la incorporación de nuevas tecnologías que mejoran la compatibilidad, 
+     velocidad y eficiencia de los sistemas.</p>
+
+     <p>En los últimos años, las mejoras en placas base incluyen:</p>
+
+     <ul class="separacion">
+        <li>Compatibilidad con memorias DDR5: Mayor velocidad y menor consumo energético.</li></a></li>
+
+        <li>Puertos PCIe 5.0: Duplican el ancho de banda respecto a PCIe 4.0, optimizando el rendimiento de SSDs y GPUs.</a></li>
+
+        <li>Soporte para USB 4.0 y Thunderbolt: Mayor velocidad en transferencia de datos.</a></li>
+
+        <li>Mejoras en VRM y disipación: Regulación eficiente de voltaje para CPUs de alto rendimiento.</a></li>
+
+        <li>Soporte para overclocking avanzado en modelos entusiastas.</a></li>
+
+     </ul>
+     
+    <h2>Comparativa de Placas Madre (Generación Anterior vs Actual)</h2>
+
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Generación Anterior (2021-2022)</th>
+                <th>Generación Actual (2023-2024)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Chipset</b></td>
+                <td>Intel Z690 / AMD X570</td>
+                <td>Intel Z790 / AMD X670E</td>
+            </tr>
+            <tr>
+                <td><b>Soporte de RAM</b></td>
+                <td>DDR4 (3200-4000MHz)</td>
+                <td>DDR5 (6000-8000MHz)</td>
+            </tr>
+            <tr>
+                <td><b>Ranuras PCIe</b></td>
+                <td>PCIe 4.0</td>
+                <td>PCIe 5.0</td>
+            </tr>
+            <tr>
+                <td><b>Almacenamiento</b></td>
+                <td>NVMe PCIe 4.0 (7000 MB/s)</td>
+                <td>NVMe PCIe 5.0 (14,000 MB/s)</td>
+            </tr>
+            <tr>
+                <td><b>Puertos USB</b></td>
+                <td>USB 3.2 Gen 2 (10 Gbps)</td>
+                <td>USB 4.0 (40 Gbps)</td>
+            </tr>
+            <tr>
+                <td><b>WiFi y Red</b></td>
+                <td>WiFi 6, 2.5GbE Ethernet</td>
+                <td>WiFi 6E/7, 10GbE Ethernet</td>
+            </tr>
+            <tr>
+                <td><b>VRM y Energía</b></td>
+                <td>Fases VRM de 12-14</td>
+                <td>Fases VRM de 18-20+</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="placamadre">
+        <img src="C:\xampp\htdocs\taller paguina web\mi-proyecto/placamadre.jpg" alt="fabricantes de chips" width="450">
+    </div>
+    
+    <h1>En resumen:</h1>
+
+    <p>El avance tecnológico en componentes de hardware ha sido significativo en los últimos años, mejorando el rendimiento, 
+    la eficiencia energética y la capacidad de procesamiento en todos los ámbitos.</p>
+
+    <p>Los procesadores han evolucionado con más núcleos, mayor frecuencia y arquitecturas optimizadas que potencian la inteligencia
+     artificial y el rendimiento multitarea. Las tarjetas gráficas han dado un salto con memorias GDDR7 y nuevas arquitecturas que mejoran la 
+    velocidad de renderizado y eficiencia energética. Los almacenamientos SSD han pasado de PCIe 4.0 a 5.0, duplicando su velocidad de transferencia. 
+    Y las placas madre han adoptado estándares más avanzados, como soporte para DDR5, PCIe 5.0 y conectividad más rápida con USB 4.0 y WiFi 7.</p>
+
+    <p>Estos avances no solo impulsan la industria gaming y profesional, sino que también permiten nuevas aplicaciones en inteligencia artificial, desarrollo de software, diseño gráfico y 
+    computación científica. Con cada generación, la tecnología sigue evolucionando, ofreciendo mayores prestaciones y una mejor experiencia para los usuarios.</p>
+
+    <canvas id="bouncingBalls"></canvas>
+
+
+</div>
+<div class="ball-container">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+</div>
+
+
+    <a href="index.html" class="volver">⬅ Volver al índice</a>
 </body>
 </html>
 
