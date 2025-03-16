@@ -1,202 +1,148 @@
-.indice {
-    color: rgb(91, 245, 88);
-    font-size: 24px;
-    text-align: center; /* Centra el texto */
-        font-weight: bold;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Sombra al texto */
-    
-
-}
+/* Estilos generales */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: -200vh;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(to right, rgb(35, 35, 35), rgb(118, 118, 118), black);
-    position: relative;
-    overflow: hidden; /* Evita que las bolas generen scroll */
+    padding: 0;
+    background-image: url('placaaaa.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
 }
 
-.contenedor {
-    width: 50%; /* Ajuste del ancho */
-    max-width: 600px; /* Máximo tamaño */
-    height: 1095px; /* Más alto */
-    padding: 10px;
-    margin: auto;
-    background-color: rgb(153, 153, 153); /* Asegura que el fondo no sea transparente */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgb(255, 255, 255); /* Borde más grueso */
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
-}
-
-
-/* Estilo para el índice */
-.indice {
-    background: linear-gradient(to right, #4a2eff, #757575); /* Degradado similar al botón */
-    color: white; /* Color del texto */
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    text-decoration: none;
-}
-
-/* Cambios al pasar el mouse */
-.indice:hover {
-    background: linear-gradient(to right, #3a1fff, #5a5a5a);
-    transform: scale(1.05);
-}
-
-/* Estilo para los enlaces */
-a {
-    color: #4a2eff; /* Azul similar al botón */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Cambio de color al pasar el mouse */
-a:hover {
-    color: #3a1fff; /* Azul más brillante */
-}
-/* Estilo para los enlaces dentro de listas */
-ul li a {
-    color: #4a2eff; /* Azul similar al botón */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Cambio de color al pasar el mouse */
-ul li a:hover {
-    color: #3a1fff; /* Azul más brillante */
-    text-decoration: underline;
-}
-/* Estilos para los enlaces dentro de listas */
-ul li a {
-    color: #4a2eff !important; /* Azul vibrante */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-
-a {
-    color: white !important; /* Color del texto */
-    font-weight: bold;
-    text-decoration: none;
-    background: linear-gradient(to right, #4a2eff, #666); /* Degradado similar */
-    padding: 10px 15px; /* Espaciado */
-    border-radius: 15px; /* Bordes redondeados */
-    display: inline-block;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra */
-    color: white !important; /* Cambia el color del texto a blanco */
-    font-weight: bold;
-    text-decoration: none;
-}
-
-
-a:hover {
-    background: linear-gradient(to right, #3722cc, #555); /* Cambio sutil en hover */
-}
-
-.puntos {
-    color: rgb(5, 5, 5) !important; /* Mantiene el color blanco en los enlaces */
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: start; /* Alinea a la izquierda */
-}
-
-.puntos li {
-    display: block;
-    width: 100%;
-}
-
-.bola {
+/* Fondo de la página */
+.fondo {
+    background: url('placaaaa.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
     position: absolute;
-    top: -20px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    animation: caer 5s linear infinite, cambiarColor 3s infinite alternate;
-}
-
-@keyframes caer {
-    0% {
-        transform: translateY(-20px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-}
-
-@keyframes cambiarColor {
-    0% {
-        background: red;
-    }
-    50% {
-        background: blue;
-    }
-    100% {
-        background: purple;
-    }
-}
-
-/* Generamos múltiples bolitas */
-.bola:nth-child(1) { left: 10%; animation-duration: 4s; }
-.bola:nth-child(2) { left: 25%; animation-duration: 5s; }
-.bola:nth-child(3) { left: 40%; animation-duration: 6s; }
-.bola:nth-child(4) { left: 55%; animation-duration: 4.5s; }
-.bola:nth-child(5) { left: 70%; animation-duration: 5.5s; }
-.bola:nth-child(6) { left: 85%; animation-duration: 6.5s; }
-
-/* Generar 100 bolitas con diferentes tamaños y posiciones */
-@for $i from 1 through 100 {
-    .contenedor-bolas .bola:nth-child(#{$i}) {
-        left: #{random(100)}%;
-        width: #{random(8) + 5}px; /* Entre 5px y 13px */
-        height: #{random(8) + 5}px;
-        animation-duration: #{random(2) + 2}s; /* Entre 3 y 6 segundos */
-        animation-delay: #{random(1)}s; /* Diferentes tiempos */
-    }
-}
-
-.corner-image {
-    position: fixed;
-    bottom: 10px;
-    width: 100px; /* Tamaño inicial */
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    opacity: 0.2; /* Aún más transparente */
-}
-
-.corner-image img {
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que quede detrás de todo */
+}
+
+/* Menú de navegación */
+.menu {
+    background: linear-gradient(to right, #6200ea, #3f51b5); /* Restaurando el diseño del menú */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed; /* Fijado arriba */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Asegura que quede por encima del contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para separar del fondo */
+}
+
+/* Título del menú */
+.menu h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navegación */
+.menu nav {
+    margin-top: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Cambio de color al pasar el mouse */
+}
+
+.contenido {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo con opacidad */
+    margin: 100px auto 20px;
+    width: 90%;
+    max-width: 800px;
+    min-height: 60vh;
+    border-radius: 10px;
+    color: black;
+    border: 5px solid rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
+    padding: 50px 30px 30px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Sombra blanca más suave */
+    position: relative;
+    z-index: 5;
     height: auto;
-    border-radius: 10px; /* Bordes redondeados */
+    background-image: url('gato-1-removebg-preview.png'); /* Imagen decorativa */
 }
 
-.corner-image.left {
+
+/* Título dentro del contenido */
+.contenido h2 {
+    margin-bottom: 20px;
+    border: 2px solid white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #4377fc;
+    color: white;
+}
+
+/* Párrafos */
+.contenido p {
+    margin: 0 auto;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* Imágenes de los gatos */
+.gato {
+    width: 80px;
+    height: auto;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    z-index: 15;
+}
+
+.gato-izquierda {
     left: 10px;
+    bottom: 10px;
 }
 
-.corner-image.right {
+.gato-derecha {
     right: 10px;
+    bottom: 10px;
 }
 
-.corner-image:hover {
-    transform: scale(1.4); /* Crece aún más */
-    opacity: 0.8; /* Se vuelve más visible */
+/* Efecto hover en gatos */
+.gato:hover {
+    transform: scale(1.5);
+}
+
+.contenedor-gatos {
+    position: fixed; /* Mantiene las imágenes en la pantalla */
+    bottom: 0; /* Asegura que las imágenes estén en la parte inferior */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ubica los gatos a los lados */
+    padding: 20px;
+    pointer-events: none; /* Evita que interfieran con los clics */
+}
+
+/* Animación de flotar */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Sube */
+    100% { transform: translateY(0px); } /* Baja */
+}
+
+.gato {
+    width: 80px; /* Ajusta el tamaño si es necesario */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    animation: flotar 2s infinite ease-in-out;
 }
 
 

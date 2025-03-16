@@ -6,16 +6,29 @@ body {
     line-height: 1.5;
     text-align: justify;
     background-color: white;
+    background: url('pexels-pixabay-256381.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    font-size: 18px;
+
+    
 }
 
 h1 {
     text-align: center;
     font-size: 30px; /* Compactamos el tamaño del título */
     margin-bottom: 5px; /* Menos separación debajo del título */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #007bff, #00c3ff); /* Degradado azul */
+    color: white; /* Texto en blanco para mejor contraste */
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
     
 }
-
-
+    
 h1.titulo-margen {
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     padding: 12px 20px;
@@ -25,6 +38,8 @@ h1.titulo-margen {
     color: white; /* Texto en blanco para mejor contraste */
     display: inline-block;
     transition: transform 0.2s ease-in-out;
+    font-size: 24px;
+    
 }
 .titulo-margen:hover {
     transform: scale(1.05);
@@ -34,29 +49,33 @@ p {
 }
 
 .volver {
-    display: inline-flex;
-    align-items: center;
+    position: fixed; /* Fija el botón en pantalla */
+    left: 20px; /* Lo mantiene en la izquierda */
+    top: 80px; /* Lo baja para que no se superponga con el menú */
+    z-index: 100; /* Asegura que esté por encima del contenido */
+
+    /* Estilos del botón */
     font-size: 18px;
     font-weight: bold;
-    color: #dad9d9 !important; /* Azul brillante */
+    color: white;
     text-decoration: none;
-    transition: all 0.3s ease-in-out !important;
-    position: relative; 
-    top: -120px; /* Ajusta este valor según lo necesites */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     padding: 12px 20px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: linear-gradient(135deg, #452ef4, #747575); /* Degradado azul */
-    color: rgb(253, 252, 252); /* Texto en blanco para mejor contraste */
-    display: inline-block;
+    background: linear-gradient(135deg, #452ef4, #747575); /* Degradado */
     transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+/* Efecto al pasar el mouse */
 .volver:hover {
-    color: #00C3FF !important; /* Azul más claro */
-    transform: scale(1.1) !important;
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #574bff, #999999); /* Cambio de color */
 }
+
+
 
 /* Animación para la flecha */
 .volver-indice::before {
@@ -133,40 +152,20 @@ p {
     line-height: 1.4; /* Ajusta el valor según necesites */
 }
 
-.placamadre {
-    text-align: center;
-    padding: 2px;  /* Espacio entre la imagen y el borde */
-    border-radius: 5px; /* Bordes ligeramente redondeados (opcional) */
-    margin-top: 20px;      /* Espacio respecto a la tabla */
+.placa-madre {
+    display: block; /* Evita que la imagen se comporte como inline */
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center; /* No afecta imágenes, lo eliminaremos en la nueva solución */
+    margin: 50px auto 50px auto; /* Baja la imagen y mantiene espacio abajo */
+    max-width: 100%;
 }
+
 
 body {
-    color: white; /* Cambia el color del texto a blanco */
-    background: radial-gradient(circle at left, rgba(255, 255, 255, 0.1) 1%, transparent 20%),
-                radial-gradient(circle at right, rgba(255, 255, 255, 0.1) 1%, transparent 20%),
-                #1a1a1a; /* Color de fondo oscuro */
-    background-size: 200px 100%, 200px 100%, cover;
-    background-repeat: repeat;
+    color: rgb(27, 26, 26);
+    background-color: white; /* O usa otro color que prefieras */
 }
-   
     
-
-body::before {
-    left: 0;
-}
-body::after {
-    right: 0;
-}
-
-body::before, body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    filter: blur(10px);
-}
 /* Contenedor principal */
 .container {
     max-width: 800px;
@@ -204,58 +203,81 @@ body::before, body::after {
     right: 0;
 }
 
-@keyframes waves {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(20px); }
-    100% { transform: translateY(0px); }
-}
-
-.side-waves {
-    position: fixed;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(53, 53, 53, 0.8), transparent);
-    animation: waves 5s ease-in-out infinite;
-}
-
-.left { left: 0; }
-.right { right: 0; }
-
-/* Contenedor de las bolas */
-.ball-container {
+/* Menú de navegación fijo */
+.menu {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: -1;
+    width: 100%;
+    background: #6200ea;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
 }
 
-/* Estilos de las bolas */
-.ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: fall infinite linear;
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Ajuste para que caigan más cerca del contenido */
-.ball:nth-child(1) { left: 10vw; animation-duration: 4s; }
-.ball:nth-child(2) { left: 15vw; animation-duration: 3s; background-color: blue; }
-.ball:nth-child(3) { left: 85vw; animation-duration: 5s; background-color: green; }
-.ball:nth-child(4) { left: 90vw; animation-duration: 4.5s; background-color: yellow; }
-.ball:nth-child(5) { left: 12vw; animation-duration: 3.5s; background-color: purple; }
-.ball:nth-child(6) { left: 88vw; animation-duration: 6s; background-color: orange; }
-
-/* Animación de caída infinita */
-@keyframes fall {
-    0% { top: -5vh; }
-    100% { top: 105vh; }
+.menu nav a:hover {
+    
+    color: #4fff22; /* Amarillo limón */
+    text-shadow: 0 0 10px #d4ff00, 0 0 20px #d4ff00; /* Brillo verde neón */
 }
 
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Espaciado para evitar que el contenido quede oculto debajo del menú */
+section {
+    padding-top: 80px; 
+}
+
+/* Estilo para los títulos de las secciones */
+.titulo-seccion {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 12px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #007bff, #00c3ff); /* Degradado azul */
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+/* Efecto al pasar el mouse */
+.titulo-seccion:hover {
+    transform: scale(1.1); /* Se agranda un poco */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor */
+}
+
+h1, h2, h3,.separacion, p, a {
+    color: white !important; /* Fuerza el color blanco */
+}
+
+.contenido {
+    color: white !important;
+}
+
+/* Forzar color blanco en tablas */
+.excel-table, th, td {
+    color: white !important; /* Hace que todo el texto en la tabla sea blanco */
+    border-color: white; /* Asegura que los bordes sean visibles */
+}
+
+/* Forzar color blanco en listas */
+ul, ol, li {
+    color: white !important;
+}
+
+h1,.excel-table, th, td {
+    font-size: inherit; /* Mantiene el tamaño original */
+}
