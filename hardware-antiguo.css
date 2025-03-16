@@ -1,0 +1,110 @@
+/* ======= Estilos Generales ======= */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #2c2c2c, #3a3a3a); /* Fondo con degradado dinámico */
+    margin: 0;
+    padding: 20px;
+    color: #fff; /* Todas las letras en blanco */
+    overflow-x: hidden; /* Permite el desplazamiento vertical pero oculta el horizontal */
+}
+
+/* ======= Encabezados con Resplandor ======= */
+h1, h2 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+}
+
+/* ======= Párrafos ======= */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animación para párrafos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ======= Listas ======= */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* ======= Enlaces con Resplandor ======= */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #aaa;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+/* ======= Animación de Entrada ======= */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main {
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* ======= Botón Dinámico de Volver al Índice ======= */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #444;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background: #666;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
