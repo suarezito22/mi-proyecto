@@ -1,59 +1,64 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #2c2c2c, #3a3a3a); /* Fondo con degradado dinámico */
-    margin: 0;
-    padding: 20px;
-    color: #fff; /* Todas las letras en blanco */
-    overflow-x: hidden; /* Permite el desplazamiento vertical pero oculta el horizontal */
+    background-image: url('imagen-fondo-presente.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff; /* Letras en blanco */
+    padding-top: 70px; /* Evita que el menú tape el contenido */
+    text-align: center; /* Centra todo el texto */
 }
 
-/* ======= Encabezados con Resplandor ======= */
-h1, h2 {
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    transition: transform 0.3s ease-in-out;
-}
 
-h1:hover {
-    transform: scale(1.1);
-}
-
+/* ======= Centrar H2 ======= */
 h2 {
-    border-bottom: 2px solid #aaa;
-    padding-bottom: 5px;
-}
-
-/* ======= Párrafos ======= */
-p {
-    font-size: 16px;
-    line-height: 1.5;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 10px 15px;
+    border: 3px solid rgb(255, 254, 254); /* Agregamos el borde */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    background-color: #070c85;
     color: #fff;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Animación para párrafos */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Efecto hover en H2 */
+h2:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    color: #fff;
 }
 
-/* ======= Listas ======= */
-ul {
-    list-style-type: square;
-    padding-left: 20px;
+h1 {
+    text-align: center;
+    display: inline-block; /* Ajusta el borde al tamaño del texto */
+    margin: 25px auto; /* Centra horizontalmente */
+    padding: 10px 15px;
+    border: 3px solid rgb(254, 250, 250); /* Borde negro */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    background-color: #2a2a2b;
 }
 
+/* Efecto hover en H1 */
+h1:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    color: #fff;
+}
+
+
+/* ======= Alinear Párrafos y Listas a la Izquierda ======= */
+p, ul {
+    text-align: left; /* Alinea el contenido a la izquierda */
+    max-width: 800px; /* Mantiene un ancho adecuado */
+    margin: 0 auto 20px; /* Centra el bloque */
+}
+
+/* Asegurar que los elementos de la lista también estén alineados a la izquierda */
 li {
-    margin-bottom: 5px;
-    color: #fff;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    text-align: left;
 }
 
 /* ======= Enlaces con Resplandor ======= */
@@ -106,4 +111,189 @@ main {
     background: #666;
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(12, 14, 116, 0.975); /* Fondo oscuro semitransparente */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.menu nav {
+    margin-top: 5px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.menu a:hover {
+    color: #55ff00;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.boton-volver {
+    position: fixed;
+    top: 120px; /* Ubicado a 120px debajo del menú */
+    left: 20px; /* Pegado a la izquierda */
+    background: #1a086a;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 1000; /* Para que siempre esté visible */
+}
+
+/* Efecto hover */
+.boton-volver:hover {
+    background: #14237b;
+    transform: scale(1.1);
+    color: chartreuse;
+}
+
+.img-procesadores {
+    display: flex; /* Coloca las imágenes en fila */
+    justify-content: center; /* Centra las imágenes */
+    gap: 10px; /* Espacio entre las imágenes */
+    margin-top: 10px;
+}
+
+.img-procesadores img {
+    width: 300px; /* Tamaño pequeño */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.img-procesadores img:hover {
+    transform: scale(1.1); /* Se agrandan al pasar el mouse */
+}
+
+/* Contenedor de imágenes */
+/* Contenedor de imágenes (ahora en bloque) */
+.contenedor-memoria {
+    display: block; /* Asegura que las imágenes queden debajo */
+    text-align: center; /* Alinea a la izquierda si es necesario */
+    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+/* Imágenes pequeñas en fila */
+.img-memoria-almacenamiento {
+    width: 300px; /* Ajuste de tamaño */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Para mantenerlas en la misma línea */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+/* Efecto hover */
+.img-memoria-almacenamiento:hover {
+    transform: scale(1.1);
+}
+
+.img-cuantico {
+    display: block; /* Asegura que las imágenes queden debajo */
+    text-align: center; /* Alinea a la izquierda si es necesario */
+    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+.img-cuantico {
+    width: 300px; /* Ajuste de tamaño */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Para mantenerlas en la misma línea */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+.img-cuantico:hover {
+    transform: scale(1.1);
+}
+
+.contenedor-npu {
+    display: block; /* Asegura que las imágenes queden debajo */
+    text-align: center; /* Alinea a la izquierda si es necesario */
+    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+/* Imágenes pequeñas en fila */
+.img-memoria-npu {
+    width: 300px; /* Ajuste de tamaño */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Para mantenerlas en la misma línea */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+/* Efecto hover */
+.img-memoria-npu:hover {
+    transform: scale(1.1);
+}
+
+.img-wifi {
+    display: block; /* Asegura que las imágenes queden debajo */
+    text-align: center; /* Alinea a la izquierda si es necesario */
+    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+.img-wifi {
+    width: 400px; /* Ajuste de tamaño */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Para mantenerlas en la misma línea */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+.img-wifi:hover {
+    transform: scale(1.1);
+}
+
+.img-c1 {
+    display: block; /* Asegura que las imágenes queden debajo */
+    text-align: center; /* Alinea a la izquierda si es necesario */
+    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+.img-c1 {
+    width: 400px; /* Ajuste de tamaño */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Para mantenerlas en la misma línea */
+    margin-right: 10px; /* Espaciado entre imágenes */
+}
+
+.img-c1:hover {
+    transform: scale(1.1);
 }

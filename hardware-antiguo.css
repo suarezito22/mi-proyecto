@@ -1,110 +1,164 @@
 /* ======= Estilos Generales ======= */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #2c2c2c, #3a3a3a); /* Fondo con degradado dinámico */
-    margin: 0;
-    padding: 20px;
-    color: #fff; /* Todas las letras en blanco */
-    overflow-x: hidden; /* Permite el desplazamiento vertical pero oculta el horizontal */
+    background-image: url('opcion-3.webp'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fdfcfc; /* Letras en blanco */
+    padding-top: 80px; /* Evita que el menú tape el contenido */
+    text-align: center; /* Centra todo el texto */
+    position: relative; /* Necesario para la capa oscura */
 }
 
-/* ======= Encabezados con Resplandor ======= */
-h1, h2 {
-    color: #fff;
+/* Capa oscura sobre la imagen de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad (0.5 es 50%) */
+    z-index: -1; /* Se mantiene detrás del contenido */
+}
+
+
+/* ======= Menú de Navegación ======= */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    padding: 10px 0;
     text-align: center;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-h1:hover {
-    transform: scale(1.1);
+.menu h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
 }
+
+.menu nav {
+    margin-top: 5px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.menu a:hover {
+    color: #48ff00;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* ======= Contenido Principal ======= */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ======= Encabezados ======= */
+h1 {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 3px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    margin-top: 20px;
+    font-size: 28;
+}
+
 
 h2 {
-    border-bottom: 2px solid #aaa;
-    padding-bottom: 5px;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 3px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo inicial */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: 20px;
+    font-size: 26;
 }
 
-/* ======= Párrafos ======= */
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+/* Efecto al pasar el mouse */
+h2:hover {
+    background: rgba(0, 0, 139, 0.7); /* Azul oscuro semitransparente */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    border-color: rgba(173, 216, 230, 0.8); /* Borde azul claro al pasar el mouse */
 }
 
-/* Animación para párrafos */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+
+/* Efecto hover en encabezados */
+h1:hover, h2:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* ======= Listas ======= */
 ul {
     list-style-type: square;
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
     padding-left: 20px;
 }
 
 li {
-    margin-bottom: 5px;
-    color: #fff;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-/* ======= Enlaces con Resplandor ======= */
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+/* ======= Imágenes Centradas ======= */
+.img-hardware {
+    display: block;
+    width: 200px; /* Tamaño ajustado */
+    height: auto;
+    object-fit: contain;
+    margin: 20px auto; /* Centrado */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-a:hover {
-    color: #aaa;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+/* Efecto de zoom en imágenes */
+.img-hardware:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(44, 7, 165, 0.5);
 }
 
-/* ======= Animación de Entrada ======= */
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-main {
-    animation: slideIn 0.8s ease-in-out;
-}
-
-/* ======= Botón Dinámico de Volver al Índice ======= */
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #444;
-    color: #fff;
+/* ======= Botón de Volver al Índice ======= */
+.boton-volver {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background: #3d9af0;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
     font-size: 16px;
     font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
     text-decoration: none;
-    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 1000;
 }
 
-.back-button:hover {
-    background: #666;
+/* Efecto hover en el botón */
+.boton-volver:hover {
+    background: #1b1063;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }

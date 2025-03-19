@@ -24,7 +24,7 @@ body {
 
 /* Menú de navegación */
 .menu {
-    background: linear-gradient(to right, #6200ea, #3f51b5); /* Restaurando el diseño del menú */
+    background: linear-gradient(to right, #252850, #3f51b5); /* Restaurando el diseño del menú */
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -86,7 +86,7 @@ body {
     padding: 10px;
     display: inline-block;
     border-radius: 5px;
-    background-color: #4377fc;
+    background-color: #252850;
     color: white;
 }
 
@@ -145,4 +145,8 @@ body {
     animation: flotar 2s infinite ease-in-out;
 }
 
+p {
+    font-size: 20px; /* Ajusta el tamaño de la letra */
+    line-height: 1.6; /* Aumenta el espacio entre líneas para mejor lectura */
+}
 
