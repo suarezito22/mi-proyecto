@@ -1,18 +1,18 @@
-/* ======= Estilos Generales ======= */
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('opcion-3.webp'); /* Imagen de fondo */
+    background-image: url('opcion-3.webp'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #fdfcfc; /* Letras en blanco */
-    padding-top: 80px; /* Evita que el menú tape el contenido */
-    text-align: center; /* Centra todo el texto */
-    position: relative; /* Necesario para la capa oscura */
+    color: #fdfcfc; 
+    padding-top: 80px; 
+    text-align: center; 
+    position: relative; 
 }
 
-/* Capa oscura sobre la imagen de fondo */
+
 body::before {
     content: "";
     position: fixed;
@@ -20,18 +20,18 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad (0.5 es 50%) */
-    z-index: -1; /* Se mantiene detrás del contenido */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
 }
 
 
-/* ======= Menú de Navegación ======= */
+
 .menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.8); 
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -62,14 +62,14 @@ body::before {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-/* ======= Contenido Principal ======= */
+
 main {
     max-width: 900px;
     margin: auto;
     padding: 20px;
 }
 
-/* ======= Encabezados ======= */
+
 h1 {
     display: inline-block;
     padding: 10px 15px;
@@ -88,28 +88,28 @@ h2 {
     padding: 10px 15px;
     border: 3px solid white;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo inicial */
+    background: rgba(255, 255, 255, 0.1); 
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
     margin-top: 20px;
     font-size: 26;
 }
 
-/* Efecto al pasar el mouse */
+
 h2:hover {
-    background: rgba(0, 0, 139, 0.7); /* Azul oscuro semitransparente */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    border-color: rgba(173, 216, 230, 0.8); /* Borde azul claro al pasar el mouse */
+    background: rgba(0, 0, 139, 0.7); 
+    transform: scale(1.05); 
+    border-color: rgba(173, 216, 230, 0.8); 
 }
 
 
-/* Efecto hover en encabezados */
+
 h1:hover, h2:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* ======= Listas ======= */
+
 ul {
     list-style-type: square;
     text-align: left;
@@ -123,24 +123,24 @@ li {
     font-size: 16px;
 }
 
-/* ======= Imágenes Centradas ======= */
+
 .img-hardware {
     display: block;
-    width: 200px; /* Tamaño ajustado */
+    width: 200px; 
     height: auto;
     object-fit: contain;
-    margin: 20px auto; /* Centrado */
+    margin: 20px auto; 
     border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto de zoom en imágenes */
+
 .img-hardware:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(44, 7, 165, 0.5);
 }
 
-/* ======= Botón de Volver al Índice ======= */
+
 .boton-volver {
     position: fixed;
     top: 120px;
@@ -157,7 +157,7 @@ li {
     z-index: 1000;
 }
 
-/* Efecto hover en el botón */
+
 .boton-volver:hover {
     background: #1b1063;
     transform: scale(1.1);

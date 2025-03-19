@@ -1,67 +1,67 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('imagen-fondo-presente.jpg'); /* Imagen de fondo */
+    background-image: url('imagen-fondo-presente.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #ffffff; /* Letras en blanco */
-    padding-top: 70px; /* Evita que el menú tape el contenido */
-    text-align: center; /* Centra todo el texto */
+    color: #ffffff; 
+    padding-top: 70px; 
+    text-align: center; 
 }
 
 
-/* ======= Centrar H2 ======= */
+
 h2 {
     text-align: center;
     display: block;
     width: fit-content;
     margin: 25px auto;
     padding: 10px 15px;
-    border: 3px solid rgb(255, 254, 254); /* Agregamos el borde */
-    border-radius: 8px; /* Bordes redondeados */
+    border: 3px solid rgb(255, 254, 254); 
+    border-radius: 8px; 
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     background-color: #070c85;
     color: #fff;
 }
 
-/* Efecto hover en H2 */
+
 h2:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.05); 
     color: #fff;
 }
 
 h1 {
     text-align: center;
-    display: inline-block; /* Ajusta el borde al tamaño del texto */
-    margin: 25px auto; /* Centra horizontalmente */
+    display: inline-block; 
+    margin: 25px auto; 
     padding: 10px 15px;
-    border: 3px solid rgb(254, 250, 250); /* Borde negro */
-    border-radius: 8px; /* Bordes redondeados */
+    border: 3px solid rgb(254, 250, 250); 
+    border-radius: 8px; 
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
     background-color: #2a2a2b;
 }
 
-/* Efecto hover en H1 */
+
 h1:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.05); 
     color: #fff;
 }
 
 
-/* ======= Alinear Párrafos y Listas a la Izquierda ======= */
+
 p, ul {
-    text-align: left; /* Alinea el contenido a la izquierda */
-    max-width: 800px; /* Mantiene un ancho adecuado */
-    margin: 0 auto 20px; /* Centra el bloque */
+    text-align: left; 
+    max-width: 800px; 
+    margin: 0 auto 20px; 
 }
 
-/* Asegurar que los elementos de la lista también estén alineados a la izquierda */
+
 li {
     text-align: left;
 }
 
-/* ======= Enlaces con Resplandor ======= */
+
 a {
     display: inline-block;
     text-decoration: none;
@@ -75,7 +75,7 @@ a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
-/* ======= Animación de Entrada ======= */
+
 @keyframes slideIn {
     from {
         transform: translateY(-20px);
@@ -91,7 +91,7 @@ main {
     animation: slideIn 0.8s ease-in-out;
 }
 
-/* ======= Botón Dinámico de Volver al Índice ======= */
+
 .back-button {
     display: inline-block;
     padding: 10px 20px;
@@ -118,7 +118,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(12, 14, 116, 0.975); /* Fondo oscuro semitransparente */
+    background: rgba(12, 14, 116, 0.975); 
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -151,8 +151,8 @@ main {
 
 .boton-volver {
     position: fixed;
-    top: 120px; /* Ubicado a 120px debajo del menú */
-    left: 20px; /* Pegado a la izquierda */
+    top: 120px; 
+    left: 20px; 
     background: #1a086a;
     color: white;
     padding: 10px 15px;
@@ -162,10 +162,10 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-    z-index: 1000; /* Para que siempre esté visible */
+    z-index: 1000; 
 }
 
-/* Efecto hover */
+
 .boton-volver:hover {
     background: #14237b;
     transform: scale(1.1);
@@ -173,63 +173,62 @@ main {
 }
 
 .img-procesadores {
-    display: flex; /* Coloca las imágenes en fila */
-    justify-content: center; /* Centra las imágenes */
-    gap: 10px; /* Espacio entre las imágenes */
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
     margin-top: 10px;
 }
 
 .img-procesadores img {
-    width: 300px; /* Tamaño pequeño */
+    width: 300px; 
     height: auto;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto hover */
+
 .img-procesadores img:hover {
-    transform: scale(1.1); /* Se agrandan al pasar el mouse */
+    transform: scale(1.1); 
 }
 
-/* Contenedor de imágenes */
-/* Contenedor de imágenes (ahora en bloque) */
+
 .contenedor-memoria {
-    display: block; /* Asegura que las imágenes queden debajo */
-    text-align: center; /* Alinea a la izquierda si es necesario */
-    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
-/* Imágenes pequeñas en fila */
+
 .img-memoria-almacenamiento {
-    width: 300px; /* Ajuste de tamaño */
+    width: 300px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Para mantenerlas en la misma línea */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    display: inline-block; 
+    margin-right: 10px; 
 }
 
-/* Efecto hover */
+
 .img-memoria-almacenamiento:hover {
     transform: scale(1.1);
 }
 
 .img-cuantico {
-    display: block; /* Asegura que las imágenes queden debajo */
-    text-align: center; /* Alinea a la izquierda si es necesario */
-    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
 .img-cuantico {
-    width: 300px; /* Ajuste de tamaño */
+    width: 300px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Para mantenerlas en la misma línea */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    display: inline-block; 
+    margin-right: 10px; 
 }
 
 .img-cuantico:hover {
@@ -237,41 +236,41 @@ main {
 }
 
 .contenedor-npu {
-    display: block; /* Asegura que las imágenes queden debajo */
-    text-align: center; /* Alinea a la izquierda si es necesario */
-    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
-/* Imágenes pequeñas en fila */
+
 .img-memoria-npu {
-    width: 300px; /* Ajuste de tamaño */
+    width: 300px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Para mantenerlas en la misma línea */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    display: inline-block; 
+    margin-right: 10px; 
 }
 
-/* Efecto hover */
+
 .img-memoria-npu:hover {
     transform: scale(1.1);
 }
 
 .img-wifi {
-    display: block; /* Asegura que las imágenes queden debajo */
-    text-align: center; /* Alinea a la izquierda si es necesario */
-    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px;
 }
 
 .img-wifi {
-    width: 400px; /* Ajuste de tamaño */
+    width: 400px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Para mantenerlas en la misma línea */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    display: inline-block; 
+    margin-right: 10px; 
 }
 
 .img-wifi:hover {
@@ -279,19 +278,19 @@ main {
 }
 
 .img-c1 {
-    display: block; /* Asegura que las imágenes queden debajo */
-    text-align: center; /* Alinea a la izquierda si es necesario */
-    margin-top: 10px; /* Espacio entre el texto y las imágenes */
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
 .img-c1 {
-    width: 400px; /* Ajuste de tamaño */
+    width: 400px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-    display: inline-block; /* Para mantenerlas en la misma línea */
-    margin-right: 10px; /* Espaciado entre imágenes */
+    display: inline-block; 
+    margin-right: 10px; 
 }
 
 .img-c1:hover {
